@@ -12,11 +12,6 @@ namespace Gbamis
         public Vector3 targetOffset = Vector3.zero;
         public EnemyData_SO enemyData_SO;
 
-        private void Update(){
-            if(enemyData_SO.playerInSight==true){
-                 EventData_SO.PlayerSeen();
-            }
-        }
         private void FixedUpdate()
         {
 
@@ -41,13 +36,22 @@ namespace Gbamis
 
                 if (Physics.Raycast(origin, dir, out testHit, enemyData_SO.sensingRange))
                 {
+                    float t = 0;
                     if (testHit.collider.gameObject.CompareTag("Player"))
                     {
                         Vector3 lookDir = otherTarget.position + targetOffset;
                         transform.LookAt(lookDir);
                         enemyData_SO.playerInSight = true;
                         enemyData_SO.playerPosition = otherTarget.position;
-                       
+
+                        t +=Time.deltaTime;
+                        if(t < 0.5){
+                            EventData_SO.PlayerSeen();
+                        }
+                        if(t > 5){
+                            t = 0;
+                        }
+                        
 
                     }
                     else
