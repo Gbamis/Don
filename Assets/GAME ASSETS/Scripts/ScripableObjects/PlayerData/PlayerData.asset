@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efad7dd6cf95754e904259d0c7edaaa, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  eventData_SO: {fileID: 11400000, guid: 67731cd23018379419af038a9b7235de, type: 2}
+  butterfly_current_position: {x: -1.1992412, y: 1.4810499, z: 2.713388}
+  butterfly_is_free: 1
+  player_current_position: {x: -1.4178412, y: -0.018950045, z: 1.7333432}
+  tapLocation: {x: 6.371003, y: -1.2573283e-16, z: 5.0020614}
+  player_health: 90
+  player_coin_count: 54
