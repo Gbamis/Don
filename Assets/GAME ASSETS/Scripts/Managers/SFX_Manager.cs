@@ -17,8 +17,10 @@ namespace Gbamis{
             EventData_SO.OnPlayerSighted +=PlayAlarm;
         }
 
-        private void PlayAlarm(){
-            alarmFX.Play();
+        public void PlayAlarm(){
+           if(alarmFX.isPlaying==false){
+               alarmFX.Play();
+           }
         }
     }
 }   

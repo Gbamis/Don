@@ -44,13 +44,7 @@ namespace Gbamis
                         enemyData_SO.playerInSight = true;
                         enemyData_SO.playerPosition = otherTarget.position;
 
-                        t +=Time.deltaTime;
-                        if(t < 0.5){
-                            EventData_SO.PlayerSeen();
-                        }
-                        if(t > 5){
-                            t = 0;
-                        }
+                        SFX_Manager.Instance.PlayAlarm();
                         
 
                     }
