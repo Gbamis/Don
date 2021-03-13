@@ -11,11 +11,12 @@ namespace Gbamis
 
         public delegate void Health(float value);
         public static event Health OnHealthChanched;
-        
-        public static void HealthChanged(float healthValue){
-            OnHealthChanched(healthValue);
-        }
+         public static void HealthChanged(float healthValue){OnHealthChanched(healthValue);}
 
+
+        public delegate void PlayerSighted();
+        public static event PlayerSighted OnPlayerSighted;
+        public static void PlayerSeen(){ OnPlayerSighted();}
     }
 
 }

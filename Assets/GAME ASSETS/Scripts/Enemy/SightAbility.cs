@@ -42,6 +42,7 @@ namespace Gbamis
                         transform.LookAt(lookDir);
                         enemyData_SO.playerInSight = true;
                         enemyData_SO.playerPosition = otherTarget.position;
+                        EventData_SO.PlayerSeen();
 
                     }
                     else
