@@ -12,6 +12,11 @@ namespace Gbamis
         public Vector3 targetOffset = Vector3.zero;
         public EnemyData_SO enemyData_SO;
 
+        private void Update(){
+            if(enemyData_SO.playerInSight==true){
+                 EventData_SO.PlayerSeen();
+            }
+        }
         private void FixedUpdate()
         {
 
@@ -42,7 +47,7 @@ namespace Gbamis
                         transform.LookAt(lookDir);
                         enemyData_SO.playerInSight = true;
                         enemyData_SO.playerPosition = otherTarget.position;
-                        EventData_SO.PlayerSeen();
+                       
 
                     }
                     else
