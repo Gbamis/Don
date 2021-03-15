@@ -58,6 +58,7 @@ namespace Gbamis
                             targetSprite.SetActive(true);
                             targetSprite.transform.position = hit.point;
                             agent.destination = hit.point;
+                            playerData.save();
                             
                         }
 

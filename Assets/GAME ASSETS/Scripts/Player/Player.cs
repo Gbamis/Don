@@ -19,10 +19,14 @@ namespace Gbamis
              controller = GetComponent<CharacterController>();
              agent = GetComponent<NavMeshAgent>();
 
-             
+            
          }
          void Start(){
              EventData_SO.HealthChanged(playerData_SO.player_health);
+             playerData_SO.load();
+         }
+        private void OnApplicationQuit() {
+             
          }
     }
 }
