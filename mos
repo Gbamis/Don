@@ -1,1 +1,5 @@
-thiis is a mos
+using UnityEngine;
+
+public class Fuel: ScriptableObject{
+  public float cost;
+}
